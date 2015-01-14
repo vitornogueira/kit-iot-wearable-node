@@ -5,4 +5,4 @@ print = @echo "=> $(1)"\
 
 docs:
 	$(call print, "Build docs")
-	jsdoc lib/ -c conf.json -d ./docs/
+	jsdox --output ./docs/ ./lib/
