@@ -1,1 +1,1 @@
-#NodeJS API Bluetooth para o Kit IoT Wearable Telefonica VIVO
+#API Bluetooth para o Kit IoT Wearable Telefonica VIVO
