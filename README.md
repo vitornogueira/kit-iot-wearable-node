@@ -18,7 +18,7 @@ Veja a documentação - [link](DOCS.md)
 
 ##Desenvolvimento
 
-###Documentação
+###Atualizando a documentação
 Utilizamos o [jsdoc](http://usejsdoc.org/) para gerar a documentação do módulo
 
 Depois de fazer as alteração lembre de atualizar a documentação
