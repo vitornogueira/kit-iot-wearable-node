@@ -1,4 +1,4 @@
-var Wearable = require('./lib/bluetooth');
+var Wearable = require('./lib/bluetooth'),
     kit = new Wearable();
 
 kit.discover(function (info) {
