@@ -114,17 +114,13 @@ Disconnect the wearable kit.
 ```js
 ...
 
-kit.discover(function (info) {
-  kit.connect(info);
+kit.on('connected', function () {
+  kit.disconnect();
+});
 
-  kit.on('connected', function () {
-    kit.disconnect();
-  });
-
-  //after disconnect the 'disconnected' event will be emitted
-  kit.on('disconnected', function () {
-    console.log('Disconnected from wearable');
-  });
+//after disconnect the 'disconnected' event will be emitted
+kit.on('disconnected', function () {
+  console.log('Disconnected from wearable');
 });
 ```
 
@@ -165,6 +161,18 @@ Trun on LED.
 
 - color `string` - OPTIONAL (default is GREEN) color of the led to turn on  
 - value `number` - OPTIONAL value of the intensity for the led (0 to 255)  
+
+**Example**  
+```js
+...
+
+kit.on('connected', function () {
+  kit.ledON(); //turn on the GREEN led by default
+  kit.ledON('GREEN'); //turn on the GREEN led
+  kit.ledON('RED'); //turn on the RED led
+  kit.ledON('BLUE'); //turn on the BLUE led
+});
+```
 
 <a name="Wearable#isConnected"></a>
 ##wearable.isConnected()
