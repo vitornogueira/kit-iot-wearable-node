@@ -1,5 +1,5 @@
 #Kit IoT Wearable Telefonica VIVO
-Módulod de [NodeJS](http://nodejs.org/) para conectar via bluetooth com o [Kit de Desenvolvimento IoT Wearable](http://iot.telefonicabeta.com/).
+Módulo de [NodeJS](http://nodejs.org/) para conectar via bluetooth com o [Kit de Desenvolvimento IoT Wearable](http://iot.telefonicabeta.com/).
 
 O kit possui os seguintes sensores:
   * Módulo Bluetooth
