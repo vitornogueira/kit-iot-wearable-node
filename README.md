@@ -24,7 +24,6 @@ $ npm install
 
 ####Validando o código
 Utilizamos o [gulp](https://www.npmjs.com/package/gulp) para automatizar as tarefas do projeto.
-Para
 ```
 $ gulp
 ```
@@ -32,7 +31,7 @@ $ gulp
 Ou para rodar um comando específico como o [jshint](http://jshint.com/) para validar a qualidade do código.
 ```
 $ gulp hint
-``
+```
 
 
 ####Atualizando a documentação
