@@ -30,6 +30,7 @@
   "devDependencies": {
     "gulp": "^3.8.10",
     "gulp-jshint": "^1.9.0",
+    "gulp-watch": "^3.0.0",
     "jsdoc-to-markdown": "^0.5.9"
   }
 }

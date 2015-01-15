@@ -5,7 +5,7 @@
 * [class: Wearable](#Wearable)
   * [new Wearable(config)](#new_Wearable)
   * [wearable.discover(callback)](#Wearable#discover)
-  * [wearable.connect(info)](#Wearable#connect)
+  * [wearable.connect(device)](#Wearable#connect)
   * [wearable.disconnect()](#Wearable#disconnect)
   * [wearable.sendCommand(command)](#Wearable#sendCommand)
   * [wearable.ledOFF()](#Wearable#ledOFF)
@@ -26,7 +26,7 @@
 * [class: Wearable](#Wearable)
   * [new Wearable(config)](#new_Wearable)
   * [wearable.discover(callback)](#Wearable#discover)
-  * [wearable.connect(info)](#Wearable#connect)
+  * [wearable.connect(device)](#Wearable#connect)
   * [wearable.disconnect()](#Wearable#disconnect)
   * [wearable.sendCommand(command)](#Wearable#sendCommand)
   * [wearable.ledOFF()](#Wearable#ledOFF)
@@ -80,12 +80,12 @@ kit.discover(function (info) {
 ```
 
 <a name="Wearable#connect"></a>
-##wearable.connect(info)
+##wearable.connect(device)
 Connect to a wearable kit.
 
 **Params**
 
-- info `object` - object that contains "address" and "name" of the wearable.  
+- device `object` - object with device information.  
   - address `string` - address of the wearable.  
   - name `string` - name of the wearable.  
 

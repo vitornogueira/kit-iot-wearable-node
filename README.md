@@ -32,7 +32,7 @@ Instale o [jshint]() globalemte para poder validar a qualidade do código.
 $ npm install jshint --global
 ```
 
-####Validando o código
+###Validando o código
 Utilizamos o [gulp](https://www.npmjs.com/package/gulp) para automatizar as tarefas do projeto.
 ```
 $ gulp
@@ -44,7 +44,7 @@ $ gulp hint
 ```
 
 
-####Atualizando a documentação
+###Atualizando a documentação
 Utilizamos o [jsdoc](http://usejsdoc.org/) para gerar a documentação do módulo.
 
 Depois de fazer as alteração lembre de atualizar a documentação.
