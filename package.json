@@ -9,20 +9,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/telefonicadigital/nodejs-kit-iot-wearable"
+    "url": "https://github.com/telefonicadigital/kit-iot-wearable-node"
   },
   "keywords": [
     "bluetooth",
-    "ble",
-    "kit",
-    "iot"
+    "kit-iot",
+    "wearable",
+    "ble"
   ],
   "author": "Vitor Leal <vitorleal1@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/telefonicadigital/nodejs-kit-iot-wearable/issues"
+    "url": "https://github.com/telefonicadigital/kit-iot-wearable-node/issues"
   },
-  "homepage": "https://github.com/telefonicadigital/nodejs-kit-iot-wearable",
+  "homepage": "https://github.com/telefonicadigital/kit-iot-wearable-node",
   "dependencies": {
     "bluetooth-serial-port": "^1.2.0",
     "underscore": "^1.7.0"
