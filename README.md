@@ -27,6 +27,11 @@ Instale o [gulp](https://www.npmjs.com/package/gulp) globalmente para poder roda
 $ npm install gulp --global
 ```
 
+Instale o [jshint]() globalemte para poder validar a qualidade do código.
+```
+$ npm install jshint --global
+```
+
 ####Validando o código
 Utilizamos o [gulp](https://www.npmjs.com/package/gulp) para automatizar as tarefas do projeto.
 ```
