@@ -17,9 +17,14 @@ Veja a documentação - [link](DOCS.md)
 
 
 ##Desenvolvimento
-Primerio instale as dependências do projeto
+Instale as dependências do projeto.
 ```
 $ npm install
+```
+
+Instale o [gulp](https://www.npmjs.com/package/gulp) globalmente para poder rodar os tarefas automatizadas.
+```
+$ npm install gulp --global
 ```
 
 ####Validando o código
@@ -35,9 +40,9 @@ $ gulp hint
 
 
 ####Atualizando a documentação
-Utilizamos o [jsdoc](http://usejsdoc.org/) para gerar a documentação do módulo
+Utilizamos o [jsdoc](http://usejsdoc.org/) para gerar a documentação do módulo.
 
-Depois de fazer as alteração lembre de atualizar a documentação
+Depois de fazer as alteração lembre de atualizar a documentação.
 ```
 $ npm run docs
 ```
