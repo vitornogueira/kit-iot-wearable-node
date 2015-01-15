@@ -14,3 +14,16 @@ O kit possui os seguintes sensores:
 
 ##Documentação
 Veja a documentação - [link](DOCS.md)
+
+
+##Desenvolvimento
+
+###Documentação
+Utilizamos o [jsdoc](http://usejsdoc.org/) para gerar a documentação do módulo
+
+Depois de fazer as alteração lembre de atualizar a documentação
+```
+$ npm run docs
+```
+
+
