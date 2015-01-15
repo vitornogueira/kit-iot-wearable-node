@@ -17,13 +17,28 @@ Veja a documentação - [link](DOCS.md)
 
 
 ##Desenvolvimento
+Primerio instale as dependências do projeto
+```
+$ npm install
+```
 
-###Atualizando a documentação
+####Validando o código
+Utilizamos o [gulp](https://www.npmjs.com/package/gulp) para automatizar as tarefas do projeto.
+Para
+```
+$ gulp
+```
+
+Ou para rodar um comando específico como o [jshint](http://jshint.com/) para validar a qualidade do código.
+```
+$ gulp hint
+``
+
+
+####Atualizando a documentação
 Utilizamos o [jsdoc](http://usejsdoc.org/) para gerar a documentação do módulo
 
 Depois de fazer as alteração lembre de atualizar a documentação
 ```
 $ npm run docs
 ```
-
-
