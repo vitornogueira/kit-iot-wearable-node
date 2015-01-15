@@ -8,7 +8,6 @@
   * [wearable.connect(info)](#Wearable#connect)
   * [wearable.disconnect()](#Wearable#disconnect)
   * [wearable.sendCommand(command)](#Wearable#sendCommand)
-  * [wearable.onData(data)](#Wearable#onData)
   * [wearable.ledOFF()](#Wearable#ledOFF)
   * [wearable.ledON(color, value)](#Wearable#ledON)
   * [wearable.isConnected()](#Wearable#isConnected)
@@ -30,7 +29,6 @@
   * [wearable.connect(info)](#Wearable#connect)
   * [wearable.disconnect()](#Wearable#disconnect)
   * [wearable.sendCommand(command)](#Wearable#sendCommand)
-  * [wearable.onData(data)](#Wearable#onData)
   * [wearable.ledOFF()](#Wearable#ledOFF)
   * [wearable.ledON(color, value)](#Wearable#ledON)
   * [wearable.isConnected()](#Wearable#isConnected)
@@ -132,13 +130,15 @@ Send command to the wearable.
 
 - command `string` - command to send to the wearable.  
 
-<a name="Wearable#onData"></a>
-##wearable.onData(data)
-On data receive from wearable.
+**Example**  
+```js
+...
 
-**Params**
-
-- data `string` - string received from the wearable.  
+kit.on('connected', function () {
+  //send the command to read the luminosity sensor
+  kit.sendCommand('#LI0000');
+});
+```
 
 <a name="Wearable#ledOFF"></a>
 ##wearable.ledOFF()
