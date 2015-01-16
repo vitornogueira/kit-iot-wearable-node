@@ -14,10 +14,12 @@
   "keywords": [
     "bluetooth",
     "kit-iot",
-    "wearable",
-    "ble"
+    "kit-iot-wearable",
+    "wireless",
+    "development",
+    "wearable"
   ],
-  "author": "Vitor Leal <vitorleal1@gmail.com>",
+  "author": "Vitor Leal <vitor@telefonicabeta.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/telefonicadigital/kit-iot-wearable-node/issues"
