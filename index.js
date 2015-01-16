@@ -14,10 +14,13 @@ kit.on('connected', function () {
   console.log('Wearable is Conected!');
 
   kit.ledON('RED');
-  kit.playMusic('christmas');
+  kit.playMusic();
 
   kit.ledOFF();
   kit.ledON('GEEN');
+
+  kit.getTemperature();
+
 });
 
 //On error event
