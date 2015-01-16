@@ -4,7 +4,7 @@
   "description": "API Bluetooth para o Kit IoT Wearable v.3 da Telefonica VIVO",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha test",
     "docs": "jsdoc2md ./lib/*.js > DOCS.md"
   },
   "repository": {
