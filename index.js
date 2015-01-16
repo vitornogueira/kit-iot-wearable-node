@@ -1,15 +1,23 @@
 var Wearable = require('./lib/bluetooth'),
     kit = new Wearable();
 
+//Start looking for the wearable
+kit.findWearable();
+
 //Will be emitted after the dicover find a wearable
 kit.on('found', function () {
-  console.log('found event')
-  kit.connect();
+  console.log('found event');
+  console.log(kit.devices);
 });
 
 kit.on('connected', function () {
   console.log('Wearable is Conected!');
-  kit.ledON();
+
+  kit.ledON('RED');
+  kit.playMusic('christmas');
+
+  kit.ledOFF();
+  kit.ledON('GEEN');
 });
 
 //On error event
@@ -21,9 +29,6 @@ kit.on('data', function (data) {
   console.log(data);
 });
 
-
-//Start looking for the wearable
-kit.discover();
 
 //module.exports = require('./lib/bluetooth');
 
