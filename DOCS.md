@@ -195,7 +195,7 @@ Play music.
 
 **Params**
 
-- music `string` - OPTIONAL (default is FIRST)  
+- music `string` - OPTIONAL (default is MARIO)  
 
 **Example**  
 ```js
