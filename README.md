@@ -25,6 +25,12 @@ var Wearable = require('kit-iot-wearable'),
     kit = new Wearable();
 
 kit.findWearable();
+
+//after connect the 'connected' event will be emitted
+kit.on('connected', function () {
+  kit.ledON('RED');
+  kit.playMusic();
+});
 ```
 
 Para mais exemplos veja a [documentação](DOCS.md)
