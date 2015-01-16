@@ -12,11 +12,29 @@ O kit possui os seguintes sensores:
   * LED RGB
   * Buzzer
 
-##Documentação
+
+##Como utilizar
+Para utilizar o módulo instale ele utilizando o [npm](https://www.npmjs.com/)
+```
+$ npm install kit-iot-wearable
+```
+
+Exemplo de utilização
+```js
+var Wearable = require('kit-iot-wearable'),
+    kit = new Wearable();
+
+kit.findWearable();
+```
+
+Para mais exemplos veja a [documentação](DOCS.md)
+
+
+##Documentação para utilização
 Veja a documentação - [link](DOCS.md)
 
 
-##Desenvolvimento
+##Para contribuir no desenvolvimento deste módulo
 Instale as dependências do projeto.
 ```
 $ npm install
@@ -43,6 +61,11 @@ Ou para rodar um comando específico como o [jshint](http://jshint.com/) para va
 $ gulp hint
 ```
 
+###Teste o código
+Utilizamos o [mocha](https://github.com/mochajs/mocha) para testar o módulo. Depois de escrever seus `test cases` execute o comando.
+```
+$ npm test
+```
 
 ###Atualizando a documentação
 Utilizamos o [jsdoc](http://usejsdoc.org/) para gerar a documentação do módulo.
