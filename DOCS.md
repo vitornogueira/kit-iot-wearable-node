@@ -11,6 +11,8 @@
   * [wearable.ledOFF()](#Wearable#ledOFF)
   * [wearable.ledON(color, value)](#Wearable#ledON)
   * [wearable.playMusic(music)](#Wearable#playMusic)
+  * [wearable.getLuminosity()](#Wearable#getLuminosity)
+  * [wearable.getTemperature()](#Wearable#getTemperature)
   * [wearable.isConnected()](#Wearable#isConnected)
 
 **Events**
@@ -38,6 +40,8 @@
   * [wearable.ledOFF()](#Wearable#ledOFF)
   * [wearable.ledON(color, value)](#Wearable#ledON)
   * [wearable.playMusic(music)](#Wearable#playMusic)
+  * [wearable.getLuminosity()](#Wearable#getLuminosity)
+  * [wearable.getTemperature()](#Wearable#getTemperature)
   * [wearable.isConnected()](#Wearable#isConnected)
 
 <a name="new_Wearable"></a>
@@ -200,6 +204,32 @@ Play music.
 kit.on('connected', function () {
   kit.playMusic(); //play the MARIO music
   kit.playMusic('CHRISTMAS'); //play the CHRISTMAS music
+});
+```
+
+<a name="Wearable#getLuminosity"></a>
+##wearable.getLuminosity()
+Get luminosity value.
+
+**Example**  
+```js
+...
+
+kit.on('connected', function () {
+  kit.getLuminosity();
+});
+```
+
+<a name="Wearable#getTemperature"></a>
+##wearable.getTemperature()
+Get temperature value.
+
+**Example**  
+```js
+...
+
+kit.on('connected', function () {
+  kit.getTemperature();
 });
 ```
 
