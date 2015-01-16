@@ -103,4 +103,8 @@ describe('Helpers', function () {
     val4.should.eql(255);
     val5.should.eql(10);
   });
+
+  it('log should be a function', function () {
+    helpers.log.should.be.instanceof(Function);
+  });
 });
