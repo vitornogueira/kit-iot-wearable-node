@@ -24,6 +24,11 @@ kit.on('connected', function () {
 });
 
 //On error event
+kit.on('disconnected', function () {
+  console.log('Disconnected');
+});
+
+//On error event
 kit.on('error', function (err) {
   console.log(err);
 });
