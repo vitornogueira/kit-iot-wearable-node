@@ -1,4 +1,4 @@
-#Kit IoT Wearable Telefonica VIVO [![Build Status](https://travis-ci.org/telefonicadigital/kit-iot-wearable-node.svg?branch=master)](https://travis-ci.org/telefonicadigital/kit-iot-wearable-node)
+#Kit IoT Wearable Telefonica VIVO
 Módulo de [NodeJS](http://nodejs.org/) para conectar via bluetooth com o [Kit de Desenvolvimento IoT Wearable](http://iot.telefonicabeta.com/).
 
 O kit possui os seguintes sensores:
