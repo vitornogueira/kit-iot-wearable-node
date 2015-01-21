@@ -1,7 +1,7 @@
 var should   = require('should'),
     events   = require('events'),
     helpers  = require('../lib/helpers'),
-    Wearable = require('../lib/bluetooth'),
+    Wearable = require('../lib/wearable'),
     kit;
 
 beforeEach(function () {
