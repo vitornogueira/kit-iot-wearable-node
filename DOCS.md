@@ -13,6 +13,7 @@
   * [wearable.playMusic(music)](#Wearable#playMusic)
   * [wearable.getLuminosity()](#Wearable#getLuminosity)
   * [wearable.getTemperature()](#Wearable#getTemperature)
+  * [wearable.getAccelerometer(axis)](#Wearable#getAccelerometer)
   * [wearable.isConnected()](#Wearable#isConnected)
 
 **Events**
@@ -42,6 +43,7 @@
   * [wearable.playMusic(music)](#Wearable#playMusic)
   * [wearable.getLuminosity()](#Wearable#getLuminosity)
   * [wearable.getTemperature()](#Wearable#getTemperature)
+  * [wearable.getAccelerometer(axis)](#Wearable#getAccelerometer)
   * [wearable.isConnected()](#Wearable#isConnected)
 
 <a name="new_Wearable"></a>
@@ -217,6 +219,11 @@ Get luminosity value.
 
 kit.on('connected', function () {
   kit.getLuminosity();
+
+  //On luminosity data
+  kit.on('data:luminosity', function (data) {
+    console.log(data);
+  });
 });
 ```
 
@@ -230,6 +237,33 @@ Get temperature value.
 
 kit.on('connected', function () {
   kit.getTemperature();
+
+  //On temperature data
+  kit.on('data:temperature', function (data) {
+    console.log(data);
+  });
+});
+```
+
+<a name="Wearable#getAccelerometer"></a>
+##wearable.getAccelerometer(axis)
+Get accelerometer value.
+
+**Params**
+
+- axis `string` - OPTIONAL (default is x,y,z)  
+
+**Example**  
+```js
+...
+
+kit.on('connected', function () {
+  kit.getAccelerometer();
+
+  //On accelerometer data
+  kit.on('data:accelerometer', function (data) {
+    console.log(data);
+  });
 });
 ```
 
