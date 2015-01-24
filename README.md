@@ -1,4 +1,4 @@
-#Kit IoT Wearable Telefonica VIVO
+#Kit IoT Wearable Telefonica VIVO - Bluetooth 2
 [![NPM](https://nodei.co/npm/kit-iot-wearable.png?downloads=true)](https://nodei.co/npm/kit-iot-wearable/)
 
 Módulo de [NodeJS](http://nodejs.org/) para conectar via bluetooth com o [Kit de Desenvolvimento IoT Wearable](http://iot.telefonicabeta.com/).
