@@ -1,6 +1,6 @@
 var Wearable = require('../lib/wearable.js'),
     kit = new Wearable({
-      name: 'wV3_0E003976'
+      name: 'wV3_0E00394D'
     });
 
 //Find for the kit
@@ -10,6 +10,7 @@ kit.findWearable();
 kit.on('connected', function () {
   console.log("Connected to the kit");
   kit.ledON();
+  kit.playMelody('IMPERIAL');
 
   setTimeout(function () {
     kit.ledON('BLUE');
