@@ -69,8 +69,8 @@ describe('Wearable method', function () {
     kit.playMelody.should.be.instanceof(Function);
   });
 
-  it('getLuminosity should be a function', function () {
-    kit.getLuminosity.should.be.instanceof(Function);
+  it('luminosity should be a function', function () {
+    kit.luminosity.should.be.instanceof(Function);
   });
 
   it('getTemperature should be a function', function () {
