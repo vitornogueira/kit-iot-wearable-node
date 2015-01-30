@@ -20,19 +20,20 @@ describe('Wearable class', function () {
   });
 
   it('should throw error if no wearable name is set', function () {
-    (function () {
-      var kit = new Wearable();
-    }).should.throw();
-  });
-
-  it('should NOT throw error if wearable name is set', function () {
-    (function () {
-      var kit = new Wearable({ name: 'myBleDevice' });
-    }).should.not.throw();
+    var noNameWearable = new Wearable().should.throw()
   });
 
   it('should be an instance of EventEmitter', function () {
     kit.should.be.an.instanceOf(events.EventEmitter);
+  });
+
+  it('should have default values', function () {
+    kit.should.have.property('name');
+    kit.should.have.property('devices');
+  });
+
+  it('devices list should be an Array and be empty', function () {
+    kit.devices.should.be.instanceof(Array).and.have.lengthOf(0);
   });
 });
 
