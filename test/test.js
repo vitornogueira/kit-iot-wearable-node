@@ -65,8 +65,8 @@ describe('Wearable method', function () {
     kit.ledON.should.be.instanceof(Function);
   });
 
-  it('playMusic should be a function', function () {
-    kit.playMusic.should.be.instanceof(Function);
+  it('playMelody should be a function', function () {
+    kit.playMelody.should.be.instanceof(Function);
   });
 
   it('getLuminosity should be a function', function () {
