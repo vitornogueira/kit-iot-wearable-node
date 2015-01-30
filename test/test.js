@@ -73,8 +73,8 @@ describe('Wearable method', function () {
     kit.luminosity.should.be.instanceof(Function);
   });
 
-  it('getTemperature should be a function', function () {
-    kit.getLuminosity.should.be.instanceof(Function);
+  it('temperature should be a function', function () {
+    kit.temperature.should.be.instanceof(Function);
   });
 
   it('isConnected should be a function and return a boolean (false by default)', function () {
