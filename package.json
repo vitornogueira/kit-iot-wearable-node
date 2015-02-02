@@ -1,7 +1,7 @@
 {
-  "name": "kit-iot-wearable",
+  "name": "kit-iot-wearable-bluetooth2",
   "version": "1.0.0",
-  "description": "API Bluetooth para o Kit IoT Wearable v.3 da Telefonica VIVO",
+  "description": "API Bluetooth2 para o Kit IoT Wearable v.3 da Telefonica VIVO",
   "main": "index.js",
   "scripts": {
     "test": "mocha test",
@@ -9,9 +9,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/telefonicadigital/kit-iot-wearable-node"
+    "url": "https://github.com/telefonicadigital/kit-iot-wearable-node/tree/bluetooth2"
   },
   "keywords": [
+    "bluetooth2",
     "bluetooth",
     "kit-iot",
     "kit-iot-wearable",
