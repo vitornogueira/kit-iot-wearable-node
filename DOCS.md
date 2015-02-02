@@ -10,7 +10,7 @@
   * [wearable.sendCommand(command)](#Wearable#sendCommand)
   * [wearable.ledOFF()](#Wearable#ledOFF)
   * [wearable.ledON(color, value)](#Wearable#ledON)
-  * [wearable.playMusic(music)](#Wearable#playMusic)
+  * [wearable.playMelody(music)](#Wearable#playMelody)
   * [wearable.getLuminosity()](#Wearable#getLuminosity)
   * [wearable.getTemperature()](#Wearable#getTemperature)
   * [wearable.getAccelerometer(axis)](#Wearable#getAccelerometer)
@@ -40,7 +40,7 @@
   * [wearable.sendCommand(command)](#Wearable#sendCommand)
   * [wearable.ledOFF()](#Wearable#ledOFF)
   * [wearable.ledON(color, value)](#Wearable#ledON)
-  * [wearable.playMusic(music)](#Wearable#playMusic)
+  * [wearable.playMelody(music)](#Wearable#playMelody)
   * [wearable.getLuminosity()](#Wearable#getLuminosity)
   * [wearable.getTemperature()](#Wearable#getTemperature)
   * [wearable.getAccelerometer(axis)](#Wearable#getAccelerometer)
@@ -113,7 +113,7 @@ kit.connect({
 //after connect the 'connected' event will be emitted
 kit.on('connected', function () {
   kit.ledON('RED');
-  kit.playMusic();
+  kit.playMelody();
 });
 ```
 
@@ -191,8 +191,8 @@ kit.on('connected', function () {
 });
 ```
 
-<a name="Wearable#playMusic"></a>
-##wearable.playMusic(music)
+<a name="Wearable#playMelody"></a>
+##wearable.playMelody(music)
 Play music.
 
 **Params**
@@ -204,8 +204,8 @@ Play music.
 ...
 
 kit.on('connected', function () {
-  kit.playMusic(); //play the MARIO music
-  kit.playMusic('CHRISTMAS'); //play the CHRISTMAS music
+  kit.playMelody(); //play the MARIO music
+  kit.playMelody('CHRISTMAS'); //play the CHRISTMAS music
 });
 ```
 
