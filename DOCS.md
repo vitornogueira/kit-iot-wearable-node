@@ -5,15 +5,16 @@
 * [class: Wearable](#Wearable)
   * [new Wearable(config)](#new_Wearable)
   * [wearable.findWearable()](#Wearable#findWearable)
-  * [wearable.connect(device)](#Wearable#connect)
+  * [wearable.connect()](#Wearable#connect)
   * [wearable.disconnect()](#Wearable#disconnect)
   * [wearable.sendCommand(command)](#Wearable#sendCommand)
+  * [wearable.distance()](#Wearable#distance)
   * [wearable.ledOFF()](#Wearable#ledOFF)
   * [wearable.ledON(color, value)](#Wearable#ledON)
-  * [wearable.playMusic(music)](#Wearable#playMusic)
-  * [wearable.getLuminosity()](#Wearable#getLuminosity)
-  * [wearable.getTemperature()](#Wearable#getTemperature)
-  * [wearable.getAccelerometer(axis)](#Wearable#getAccelerometer)
+  * [wearable.playMelody(music)](#Wearable#playMelody)
+  * [wearable.luminosity()](#Wearable#luminosity)
+  * [wearable.temperature()](#Wearable#temperature)
+  * [wearable.accelerometer(axis)](#Wearable#accelerometer)
   * [wearable.isConnected()](#Wearable#isConnected)
 
 **Events**
@@ -35,15 +36,16 @@
 * [class: Wearable](#Wearable)
   * [new Wearable(config)](#new_Wearable)
   * [wearable.findWearable()](#Wearable#findWearable)
-  * [wearable.connect(device)](#Wearable#connect)
+  * [wearable.connect()](#Wearable#connect)
   * [wearable.disconnect()](#Wearable#disconnect)
   * [wearable.sendCommand(command)](#Wearable#sendCommand)
+  * [wearable.distance()](#Wearable#distance)
   * [wearable.ledOFF()](#Wearable#ledOFF)
   * [wearable.ledON(color, value)](#Wearable#ledON)
-  * [wearable.playMusic(music)](#Wearable#playMusic)
-  * [wearable.getLuminosity()](#Wearable#getLuminosity)
-  * [wearable.getTemperature()](#Wearable#getTemperature)
-  * [wearable.getAccelerometer(axis)](#Wearable#getAccelerometer)
+  * [wearable.playMelody(music)](#Wearable#playMelody)
+  * [wearable.luminosity()](#Wearable#luminosity)
+  * [wearable.temperature()](#Wearable#temperature)
+  * [wearable.accelerometer(axis)](#Wearable#accelerometer)
   * [wearable.isConnected()](#Wearable#isConnected)
 
 <a name="new_Wearable"></a>
@@ -52,8 +54,9 @@ Creates an instance of the Wearable object.
 
 **Params**
 
-- config `object` - OPTIONAL configuration object.  
-  - name `string` - OPTIONAL (default is wearable) name of the wearable to connect.  
+- config `object` - configuration object.  
+  - name `string` - REQUIRED name of the wearable to connect.  
+  - logDeviceInfo `boolean` - OPTIONAL (dafault false) log device extra information.  
 
 **Extends**: `EventEmitter`  
 **Fires**
@@ -64,10 +67,7 @@ Creates an instance of the Wearable object.
 
 **Example**  
 ```js
-var Wearable = require('kit-iot-wearable'),
-    kit = new Wearable();
-
-//or pass a object with a param name to specify a wearable name
+//pass a object with a param name to specify a wearable to connect
 var Wearable = require('kit-iot-wearable'),
     kit = new Wearable({
       name: 'name-of-your-wearable'
@@ -87,15 +87,9 @@ kit.findWearable();
 ```
 
 <a name="Wearable#connect"></a>
-##wearable.connect(device)
+##wearable.connect()
 Connect to a wearable kit. This method is executed during
 the findWearable method.
-
-**Params**
-
-- device `object` - object with device information.  
-  - address `string` - address of the wearable.  
-  - name `string` - name of the wearable.  
 
 **Fires**
 
@@ -105,15 +99,14 @@ the findWearable method.
 ```js
 ...
 
-kit.connect({
-  name   : 'wearable',
-  address: '30-14-08-26-24-39'
+kit.findWearable({
+  name: 'yourWearableName'
 });
 
-//after connect the 'connected' event will be emitted
+//after findWearable the 'connected' event will be emitted
 kit.on('connected', function () {
   kit.ledON('RED');
-  kit.playMusic();
+  kit.playMelody();
 });
 ```
 
@@ -157,6 +150,23 @@ kit.on('connected', function () {
 });
 ```
 
+<a name="Wearable#distance"></a>
+##wearable.distance()
+Get kit distance.
+
+**Example**  
+```js
+...
+
+kit.on('connected', function () {
+  kit.getDistance();
+
+  kit.on('data:distance', function (data) {
+    console.log('Distance is %s', data);
+  });
+});
+```
+
 <a name="Wearable#ledOFF"></a>
 ##wearable.ledOFF()
 Trun off LED.
@@ -191,8 +201,8 @@ kit.on('connected', function () {
 });
 ```
 
-<a name="Wearable#playMusic"></a>
-##wearable.playMusic(music)
+<a name="Wearable#playMelody"></a>
+##wearable.playMelody(music)
 Play music.
 
 **Params**
@@ -204,13 +214,13 @@ Play music.
 ...
 
 kit.on('connected', function () {
-  kit.playMusic(); //play the MARIO music
-  kit.playMusic('CHRISTMAS'); //play the CHRISTMAS music
+  kit.playMelody(); //play the Mario music by default
+  kit.playMelody('IMPERIAL'); //play the Imperial March music
 });
 ```
 
-<a name="Wearable#getLuminosity"></a>
-##wearable.getLuminosity()
+<a name="Wearable#luminosity"></a>
+##wearable.luminosity()
 Get luminosity value.
 
 **Example**  
@@ -218,7 +228,7 @@ Get luminosity value.
 ...
 
 kit.on('connected', function () {
-  kit.getLuminosity();
+  kit.luminosity();
 
   //On luminosity data
   kit.on('data:luminosity', function (data) {
@@ -227,8 +237,8 @@ kit.on('connected', function () {
 });
 ```
 
-<a name="Wearable#getTemperature"></a>
-##wearable.getTemperature()
+<a name="Wearable#temperature"></a>
+##wearable.temperature()
 Get temperature value.
 
 **Example**  
@@ -236,7 +246,7 @@ Get temperature value.
 ...
 
 kit.on('connected', function () {
-  kit.getTemperature();
+  kit.temperature();
 
   //On temperature data
   kit.on('data:temperature', function (data) {
@@ -245,8 +255,8 @@ kit.on('connected', function () {
 });
 ```
 
-<a name="Wearable#getAccelerometer"></a>
-##wearable.getAccelerometer(axis)
+<a name="Wearable#accelerometer"></a>
+##wearable.accelerometer(axis)
 Get accelerometer value.
 
 **Params**
@@ -258,7 +268,7 @@ Get accelerometer value.
 ...
 
 kit.on('connected', function () {
-  kit.getAccelerometer();
+  kit.accelerometer();
 
   //On accelerometer data
   kit.on('data:accelerometer', function (data) {
