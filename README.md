@@ -22,19 +22,18 @@ Para utilizar o módulo instale ele utilizando o [npm](https://www.npmjs.com/)
 $ npm install kit-iot-wearable
 ```
 
-###Sistemas operacionais
+###Dependência de sistema operacional
 
-####Mac
+#####Mac
   * Install [Xcode](https://itunes.apple.com/ca/app/xcode/id497799835?mt=12)
 
-####Linux (Ubuntu)
+#####Linux (Ubuntu)
   * Kernel version 3.6 or above
   * ```sudo apt-get install bluetooth bluez-utils libbluetooth-dev```
   * Rodar como ```sudo```
 
 
-####
-Exemplo de utilização
+####Exemplo de utilização
 ```js
 var Wearable = require('kit-iot-wearable'),
     kit = new Wearable({
