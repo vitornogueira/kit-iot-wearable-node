@@ -56,48 +56,6 @@ Para mais exemplos veja a [documentação](DOCS.md)
 Veja a documentação - [link](DOCS.md)
 
 
-##Para contribuir no desenvolvimento deste módulo
-Instale as dependências do projeto.
-```
-$ npm install
-```
-
-Instale o [gulp](https://www.npmjs.com/package/gulp) globalmente para poder rodar os tarefas automatizadas.
-```
-$ npm install gulp --global
-```
-
-Instale o [jshint]() globalemte para poder validar a qualidade do código.
-```
-$ npm install jshint --global
-```
-
-###Validando o código
-Utilizamos o [gulp](https://www.npmjs.com/package/gulp) para automatizar as tarefas do projeto.
-```
-$ gulp
-```
-
-Ou para rodar um comando específico como o [jshint](http://jshint.com/) para validar a qualidade do código.
-```
-$ gulp hint
-```
-
-###Teste o código
-Utilizamos o [mocha](https://github.com/mochajs/mocha) para testar o módulo. Depois de escrever seus `test cases` execute o comando.
-```
-$ npm test
-```
-
-###Atualizando a documentação
-Utilizamos o [jsdoc](http://usejsdoc.org/) para gerar a documentação do módulo.
-
-Depois de fazer as alteração lembre de atualizar a documentação.
-```
-$ npm run docs
-```
-
-
 ##Autor
 | [![twitter/vitorleal](http://gravatar.com/avatar/e133221d7fbc0dee159dca127d2f6f00?s=80)](http://twitter.com/vitorleal "Follow @vitorleal on Twitter") |
 |---|
