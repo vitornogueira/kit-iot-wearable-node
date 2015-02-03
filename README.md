@@ -1,4 +1,4 @@
-#Kit IoT Wearable Telefonica VIVO - Bluetooth Low Enery (BLE)
+# Kit IoT Wearable Telefonica VIVO - Bluetooth Low Enery (BLE)
 [![NPM](https://nodei.co/npm/kit-iot-wearable.png?downloads=true)](https://nodei.co/npm/kit-iot-wearable/)
 
 Módulo de [NodeJS](http://nodejs.org/) para conectar via bluetooth com o [Kit de Desenvolvimento IoT Wearable](http://iot.telefonicabeta.com/).
@@ -15,25 +15,25 @@ O kit possui os seguintes sensores:
   * Buzzer
 
 
-##Como utilizar
+## Como utilizar
 Para utilizar o módulo instale ele utilizando o [npm](https://www.npmjs.com/)
 
 ```
 $ npm install kit-iot-wearable
 ```
 
-###Dependência de sistema operacional
+### Dependência de sistema operacional
 
-#####Mac
+##### Mac
   * Install [Xcode](https://itunes.apple.com/ca/app/xcode/id497799835?mt=12)
 
-#####Linux (Ubuntu)
+##### Linux (Ubuntu)
   * Kernel version 3.6 or above
   * ```sudo apt-get install bluetooth bluez-utils libbluetooth-dev```
   * Rodar como ```sudo```
 
 
-####Exemplo de utilização
+#### Exemplo de utilização
 ```js
 var Wearable = require('kit-iot-wearable'),
     kit = new Wearable({
@@ -52,14 +52,14 @@ kit.on('connected', function () {
 Para mais exemplos veja a [documentação](DOCS.md)
 
 
-##Documentação para utilização
+## Documentação para utilização
 Veja a documentação - [link](DOCS.md)
 
 
-##Lista de comandos do Wearable
+## Lista de comandos do Wearable
 Veja a lista de comandos [aqui](https://github.com/telefonicadigital/kit-iot-wearable-node/wiki/Comandos-padr%C3%B5es-do-Wearable)
 
-##Autor
+## Autor
 | [![twitter/vitorleal](http://gravatar.com/avatar/e133221d7fbc0dee159dca127d2f6f00?s=80)](http://twitter.com/vitorleal "Follow @vitorleal on Twitter") |
 |---|
 | [Vitor Leal](http://vitorleal.com) |
