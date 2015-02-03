@@ -11,9 +11,9 @@
   * [wearable.ledOFF()](#Wearable#ledOFF)
   * [wearable.ledON(color, value)](#Wearable#ledON)
   * [wearable.playMelody(music)](#Wearable#playMelody)
-  * [wearable.getLuminosity()](#Wearable#getLuminosity)
-  * [wearable.getTemperature()](#Wearable#getTemperature)
-  * [wearable.getAccelerometer(axis)](#Wearable#getAccelerometer)
+  * [wearable.luminosity()](#Wearable#luminosity)
+  * [wearable.temperature()](#Wearable#temperature)
+  * [wearable.accelerometer(axis)](#Wearable#accelerometer)
   * [wearable.isConnected()](#Wearable#isConnected)
 
 **Events**
@@ -41,9 +41,9 @@
   * [wearable.ledOFF()](#Wearable#ledOFF)
   * [wearable.ledON(color, value)](#Wearable#ledON)
   * [wearable.playMelody(music)](#Wearable#playMelody)
-  * [wearable.getLuminosity()](#Wearable#getLuminosity)
-  * [wearable.getTemperature()](#Wearable#getTemperature)
-  * [wearable.getAccelerometer(axis)](#Wearable#getAccelerometer)
+  * [wearable.luminosity()](#Wearable#luminosity)
+  * [wearable.temperature()](#Wearable#temperature)
+  * [wearable.accelerometer(axis)](#Wearable#accelerometer)
   * [wearable.isConnected()](#Wearable#isConnected)
 
 <a name="new_Wearable"></a>
@@ -209,8 +209,8 @@ kit.on('connected', function () {
 });
 ```
 
-<a name="Wearable#getLuminosity"></a>
-##wearable.getLuminosity()
+<a name="Wearable#luminosity"></a>
+##wearable.luminosity()
 Get luminosity value.
 
 **Example**  
@@ -218,7 +218,7 @@ Get luminosity value.
 ...
 
 kit.on('connected', function () {
-  kit.getLuminosity();
+  kit.luminosity();
 
   //On luminosity data
   kit.on('data:luminosity', function (data) {
@@ -227,8 +227,8 @@ kit.on('connected', function () {
 });
 ```
 
-<a name="Wearable#getTemperature"></a>
-##wearable.getTemperature()
+<a name="Wearable#temperature"></a>
+##wearable.temperature()
 Get temperature value.
 
 **Example**  
@@ -236,7 +236,7 @@ Get temperature value.
 ...
 
 kit.on('connected', function () {
-  kit.getTemperature();
+  kit.temperature();
 
   //On temperature data
   kit.on('data:temperature', function (data) {
@@ -245,8 +245,8 @@ kit.on('connected', function () {
 });
 ```
 
-<a name="Wearable#getAccelerometer"></a>
-##wearable.getAccelerometer(axis)
+<a name="Wearable#accelerometer"></a>
+##wearable.accelerometer(axis)
 Get accelerometer value.
 
 **Params**
