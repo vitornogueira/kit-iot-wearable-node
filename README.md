@@ -45,7 +45,7 @@ kit.findWearable();
 //after connect the 'connected' event will be emitted
 kit.on('connected', function () {
   kit.ledON('RED');
-  kit.playMusic();
+  kit.playMelody();
 });
 ```
 
