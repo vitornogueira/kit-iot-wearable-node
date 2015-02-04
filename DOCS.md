@@ -99,9 +99,7 @@ the findWearable method.
 ```js
 ...
 
-kit.findWearable({
-  name: 'yourWearableName'
-});
+kit.findWearable();
 
 //after findWearable the 'connected' event will be emitted
 kit.on('connected', function () {
