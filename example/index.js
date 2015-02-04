@@ -1,4 +1,4 @@
-var Wearable = require('../lib/wearable.js'),
+var Wearable = require('kit-iot-wearable'),
     kit = new Wearable({
       name: 'wV3_0B003970'
     });
