@@ -1,6 +1,6 @@
 {
   "name": "kit-iot-wearable-bluetooth2",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "API Bluetooth2 para o Kit IoT Wearable v.3 da Telefonica VIVO",
   "main": "index.js",
   "scripts": {
