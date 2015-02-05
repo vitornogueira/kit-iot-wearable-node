@@ -21,6 +21,12 @@ kit.on('disconnected', function () {
   console.log('Bye!');
 });
 
+//Return the 3 axis of the accelerometer
 kit.on('data:accelerometer', function () {
   console.log(kit.data.accelerometer);
+});
+
+//Return only the x axis
+kit.on('data:accelerometer-x', function (data) {
+  console.log(data);
 });
