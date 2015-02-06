@@ -259,7 +259,7 @@ Get accelerometer value.
 
 **Params**
 
-- axis `string` - OPTIONAL (default is x,y,z)  
+- axis `string` - OPTIONAL (default is x,y,z)  X or Y or Z  
 
 **Example**  
 ```js
@@ -267,11 +267,26 @@ Get accelerometer value.
 
 kit.on('connected', function () {
   kit.accelerometer();
+});
 
-  //On accelerometer data
-  kit.on('data:accelerometer', function (data) {
-    console.log(data);
-  });
+//On accelerometer data
+kit.on('data:accelerometer', function () {
+ console.log(kit.data.accelerometer);
+});
+
+//On accelerometer X data
+kit.on('data:accelerometer-x', function (data) {
+ console.log(data);
+});
+
+//On accelerometer Y data
+kit.on('data:accelerometer-y', function (data) {
+ console.log(data);
+});
+
+//On accelerometer Z data
+kit.on('data:accelerometer-z', function (data) {
+ console.log(data);
 });
 ```
 
