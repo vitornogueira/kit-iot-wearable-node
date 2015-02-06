@@ -37,6 +37,6 @@ kit.on('data:accelerometer-y', function (data) {
 });
 
 //Return only the z axis
-kit.on('data:accelerometer-z', function () {
+kit.on('data:accelerometer-z', function (data) {
   console.log('Z is %s', data);
 });
