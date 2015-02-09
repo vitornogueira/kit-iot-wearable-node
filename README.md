@@ -55,6 +55,8 @@ Para mais exemplos veja a [documentação](DOCS.md)
 ## Documentação para utilização
 Veja a documentação - [link](DOCS.md)
 
+### Documentação do Módulo bluetooth HM-13
+Veja a documentação do módulo bluetooth HM-13 - [link](http://www.seeedstudio.com/wiki/images/3/32/Bluetooth_HM-13_en.pdf)
 
 ## Lista de comandos do Wearable
 Veja a lista de comandos [aqui](https://github.com/telefonicadigital/kit-iot-wearable-node/wiki/Comandos-padr%C3%B5es-do-Wearable)
