@@ -53,7 +53,10 @@ Para mais exemplos veja a [documentação](DOCS.md)
 
 
 ## Documentação para utilização
-Veja a documentação - [link](DOCS.md)
+Veja a documentação do módulo node - [link](DOCS.md)
+
+###Documentação do Módulo HM-13
+Veja a documentação do módulo bluetooth HM-13 - [link](http://www.seeedstudio.com/wiki/images/3/32/Bluetooth_HM-13_en.pdf)
 
 
 ## Lista de comandos do Wearable
