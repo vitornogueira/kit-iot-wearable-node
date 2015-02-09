@@ -4,7 +4,7 @@
 Módulo de [NodeJS](http://nodejs.org/) para conectar via bluetooth com o [Kit de Desenvolvimento IoT Wearable](http://iot.telefonicabeta.com/).
 
 O kit possui os seguintes sensores:
-  * Módulo Bluetooth
+  * Módulo Bluetooth - ([HM-13](http://www.fasttech.com/product/1827700-hm-13-dual-mode-bluetooth-4-0-ble-spp-le-serial))
   * Luminosidade
   * Temperatura
   * Acelerômetro
