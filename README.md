@@ -15,6 +15,9 @@ O kit possui os seguintes sensores:
   * Buzzer
 
 
+## Mantenha o Sketch Arduino do seu Kit Wearable atualizado
+[Link](https://github.com/telefonicadigital/kit-iot-wearable-arduino) - faça o download do sketch e suba no seu Kit Wearable utilizadno a IDE do Arduino.
+
 ## Como utilizar
 Para utilizar o módulo instale ele utilizando o [npm](https://www.npmjs.com/)
 
