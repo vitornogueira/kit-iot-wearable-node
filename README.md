@@ -1,4 +1,4 @@
-# Kit IoT Wearable Telefonica VIVO - Bluetooth Low Enery (BLE)
+# Kit IoT Wearable Telefonica VIVO - Bluetooth 2
 [![NPM](https://nodei.co/npm/kit-iot-wearable-bluetooth2.png?downloads=true)](https://nodei.co/npm/kit-iot-wearable-bluetooth2/)
 
 Módulo de [NodeJS](http://nodejs.org/) para conectar via bluetooth com o [Kit de Desenvolvimento IoT Wearable](http://iot.telefonicabeta.com/).
@@ -19,7 +19,7 @@ O kit possui os seguintes sensores:
 Para utilizar o módulo instale ele utilizando o [npm](https://www.npmjs.com/)
 
 ```
-$ npm install kit-iot-wearable
+$ npm install kit-iot-wearable-bluetooth2
 ```
 
 ### Dependência de sistema operacional
@@ -35,7 +35,7 @@ $ npm install kit-iot-wearable
 
 #### Exemplo de utilização
 ```js
-var Wearable = require('kit-iot-wearable'),
+var Wearable = require('kit-iot-wearable-bluetooth2'),
     kit = new Wearable({
       name: 'name-of-your-wearable'
     });
