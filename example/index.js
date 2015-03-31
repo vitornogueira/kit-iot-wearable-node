@@ -1,6 +1,6 @@
 var Wearable = require('../lib/wearable'),
     kit = new Wearable({
-      name: 'wV3_0E0039AF'
+      name: 'wV3_0E003981'
     });
 
 //Find for the kit
