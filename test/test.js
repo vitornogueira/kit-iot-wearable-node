@@ -5,34 +5,33 @@ var should   = require('should'),
     kit;
 
 beforeEach(function () {
-  kit = new Wearable({
-    name: 'myBleDevice'
-  });
+  kit = new Wearable();
 });
 
 describe('Wearable class', function () {
   it('should be an instance of Wearable class', function () {
-    var wearableInstance    = Wearable({ name: 'myBleDevice' }),
-        newWearableInstance = new Wearable({ name: 'myBleDevice' });
+    var wearableInstance    = Wearable(),
+        newWearableInstance = new Wearable();
 
     wearableInstance.should.be.an.instanceOf(Wearable);
     newWearableInstance.should.be.an.instanceOf(Wearable);
   });
 
-  it('should throw error if no wearable name is set', function () {
-    (function () {
-      var kit = new Wearable();
-    }).should.throw();
-  });
-
-  it('should NOT throw error if wearable name is set', function () {
-    (function () {
-      var kit = new Wearable({ name: 'myBleDevice' });
-    }).should.not.throw();
-  });
-
   it('should be an instance of EventEmitter', function () {
     kit.should.be.an.instanceOf(events.EventEmitter);
+  });
+
+  it('should have default values', function () {
+    kit.should.have.property('name');
+    kit.should.have.property('devices');
+  });
+
+   it('default name should be wearable', function () {
+    kit.name.should.eql('wearable');
+  });
+
+  it('devices list should be an Array and be empty', function () {
+    kit.devices.should.be.instanceof(Array).and.have.lengthOf(0);
   });
 });
 
@@ -66,16 +65,16 @@ describe('Wearable method', function () {
     kit.ledON.should.be.instanceof(Function);
   });
 
-  it('playMelody should be a function', function () {
-    kit.playMelody.should.be.instanceof(Function);
+  it('playMusic should be a function', function () {
+    kit.playMusic.should.be.instanceof(Function);
   });
 
-  it('luminosity should be a function', function () {
-    kit.luminosity.should.be.instanceof(Function);
+  it('getLuminosity should be a function', function () {
+    kit.getLuminosity.should.be.instanceof(Function);
   });
 
-  it('temperature should be a function', function () {
-    kit.temperature.should.be.instanceof(Function);
+  it('getTemperature should be a function', function () {
+    kit.getLuminosity.should.be.instanceof(Function);
   });
 
   it('isConnected should be a function and return a boolean (false by default)', function () {

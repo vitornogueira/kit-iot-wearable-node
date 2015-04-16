@@ -1,5 +1,5 @@
-# Kit IoT Wearable Telefonica VIVO - Bluetooth Low Enery (BLE)
-[![NPM](https://nodei.co/npm/kit-iot-wearable.png?downloads=true)](https://nodei.co/npm/kit-iot-wearable/)
+# Kit IoT Wearable Telefonica VIVO - Bluetooth 2
+[![NPM](https://nodei.co/npm/kit-iot-wearable-bluetooth2.png?downloads=true)](https://nodei.co/npm/kit-iot-wearable-bluetooth2/)
 
 Módulo de [NodeJS](http://nodejs.org/) para conectar via bluetooth com o [Kit de Desenvolvimento IoT Wearable](http://iot.telefonicabeta.com/).
 
@@ -15,14 +15,11 @@ O kit possui os seguintes sensores:
   * Buzzer
 
 
-## Mantenha o Sketch Arduino do seu Kit Wearable atualizado
-[Link](https://github.com/telefonicadigital/kit-iot-wearable-arduino) - faça o download do sketch e suba no seu Kit Wearable utilizadno a IDE do Arduino.
-
 ## Como utilizar
 Para utilizar o módulo instale ele utilizando o [npm](https://www.npmjs.com/)
 
 ```
-$ npm install kit-iot-wearable
+$ npm install kit-iot-wearable-bluetooth2
 ```
 
 ### Dependência de sistema operacional
@@ -38,7 +35,7 @@ $ npm install kit-iot-wearable
 
 #### Exemplo de utilização
 ```js
-var Wearable = require('kit-iot-wearable'),
+var Wearable = require('kit-iot-wearable-bluetooth2'),
     kit = new Wearable({
       name: 'name-of-your-wearable'
     });
@@ -48,7 +45,7 @@ kit.findWearable();
 //after connect the 'connected' event will be emitted
 kit.on('connected', function () {
   kit.ledON('RED');
-  kit.playMelody();
+  kit.playMusic();
 });
 ```
 
@@ -56,10 +53,11 @@ Para mais exemplos veja a [documentação](DOCS.md)
 
 
 ## Documentação para utilização
-Veja a documentação - [link](DOCS.md)
+Veja a documentação do módulo node - [link](DOCS.md)
 
-### Documentação do Módulo bluetooth HM-13
+###Documentação do Módulo bluetooth HM-13
 Veja a documentação do módulo bluetooth HM-13 - [link](http://www.seeedstudio.com/wiki/images/3/32/Bluetooth_HM-13_en.pdf)
+
 
 ## Lista de comandos do Wearable
 Veja a lista de comandos [aqui](https://github.com/telefonicadigital/kit-iot-wearable-node/wiki/Comandos-padr%C3%B5es-do-Wearable)

@@ -5,10 +5,9 @@
 * [class: Wearable](#Wearable)
   * [new Wearable(config)](#new_Wearable)
   * [wearable.findWearable()](#Wearable#findWearable)
-  * [wearable.connect()](#Wearable#connect)
+  * [wearable.connect(device)](#Wearable#connect)
   * [wearable.disconnect()](#Wearable#disconnect)
   * [wearable.sendCommand(command)](#Wearable#sendCommand)
-  * [wearable.distance()](#Wearable#distance)
   * [wearable.ledOFF()](#Wearable#ledOFF)
   * [wearable.ledON(color, value)](#Wearable#ledON)
   * [wearable.playMelody(music)](#Wearable#playMelody)
@@ -36,10 +35,9 @@
 * [class: Wearable](#Wearable)
   * [new Wearable(config)](#new_Wearable)
   * [wearable.findWearable()](#Wearable#findWearable)
-  * [wearable.connect()](#Wearable#connect)
+  * [wearable.connect(device)](#Wearable#connect)
   * [wearable.disconnect()](#Wearable#disconnect)
   * [wearable.sendCommand(command)](#Wearable#sendCommand)
-  * [wearable.distance()](#Wearable#distance)
   * [wearable.ledOFF()](#Wearable#ledOFF)
   * [wearable.ledON(color, value)](#Wearable#ledON)
   * [wearable.playMelody(music)](#Wearable#playMelody)
@@ -54,9 +52,8 @@ Creates an instance of the Wearable object.
 
 **Params**
 
-- config `object` - configuration object.  
-  - name `string` - REQUIRED name of the wearable to connect.  
-  - logDeviceInfo `boolean` - OPTIONAL (dafault false) log device extra information.  
+- config `object` - OPTIONAL configuration object.  
+  - name `string` - OPTIONAL (default is wearable) name of the wearable to connect.  
 
 **Extends**: `EventEmitter`  
 **Fires**
@@ -67,7 +64,10 @@ Creates an instance of the Wearable object.
 
 **Example**  
 ```js
-//pass a object with a param name to specify a wearable to connect
+var Wearable = require('kit-iot-wearable'),
+    kit = new Wearable();
+
+//or pass a object with a param name to specify a wearable name
 var Wearable = require('kit-iot-wearable'),
     kit = new Wearable({
       name: 'name-of-your-wearable'
@@ -87,9 +87,15 @@ kit.findWearable();
 ```
 
 <a name="Wearable#connect"></a>
-##wearable.connect()
+##wearable.connect(device)
 Connect to a wearable kit. This method is executed during
 the findWearable method.
+
+**Params**
+
+- device `object` - object with device information.  
+  - address `string` - address of the wearable.  
+  - name `string` - name of the wearable.  
 
 **Fires**
 
@@ -99,9 +105,12 @@ the findWearable method.
 ```js
 ...
 
-kit.findWearable();
+kit.connect({
+  name   : 'wearable',
+  address: '30-14-08-26-24-39'
+});
 
-//after findWearable the 'connected' event will be emitted
+//after connect the 'connected' event will be emitted
 kit.on('connected', function () {
   kit.ledON('RED');
   kit.playMelody();
@@ -145,23 +154,6 @@ Send command to the wearable.
 kit.on('connected', function () {
   //send the command to read the luminosity sensor
   kit.sendCommand('#LI0000');
-});
-```
-
-<a name="Wearable#distance"></a>
-##wearable.distance()
-Get kit distance.
-
-**Example**  
-```js
-...
-
-kit.on('connected', function () {
-  kit.getDistance();
-
-  kit.on('data:distance', function (data) {
-    console.log('Distance is %s', data);
-  });
 });
 ```
 
@@ -212,8 +204,8 @@ Play music.
 ...
 
 kit.on('connected', function () {
-  kit.playMelody(); //play the Mario music by default
-  kit.playMelody('IMPERIAL'); //play the Imperial March music
+  kit.playMelody(); //play the MARIO music
+  kit.playMelody('CHRISTMAS'); //play the CHRISTMAS music
 });
 ```
 
@@ -259,12 +251,11 @@ Get accelerometer value.
 
 **Params**
 
-- axis `string` - OPTIONAL (default is x,y,z)  X or Y or Z  
+- axis `string` - OPTIONAL (default is x,y,z)  
 
 **Example**  
 ```js
 ...
-
 kit.on('connected', function () {
   kit.accelerometer();
 });
