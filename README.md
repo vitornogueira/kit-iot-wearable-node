@@ -19,7 +19,7 @@ O kit possui os seguintes sensores:
 Para utilizar o módulo instale ele utilizando o [npm](https://www.npmjs.com/)
 
 ```
-$ npm install kit-iot-wearable-bluetooth2
+$ npm install kit-iot-wearable
 ```
 
 ### Dependência de sistema operacional
