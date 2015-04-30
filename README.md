@@ -16,7 +16,7 @@ Módulo de [Node.js](http://nodejs.org/) para conectar via bluetooth com o [Kit 
 
 
 ## Como utilizar
-Para utilizar o módulo primeiro instale usnado o [npm](https://www.npmjs.com/)
+Para utilizar o módulo primeiro instale ussndo o [npm](https://www.npmjs.com/)
 
 ```
 $ npm install kit-iot-wearable
